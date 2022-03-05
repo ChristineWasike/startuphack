@@ -1,4 +1,4 @@
-# startuphack
+# FIT-IN
 
 Increase social connections among young Africans.
 
