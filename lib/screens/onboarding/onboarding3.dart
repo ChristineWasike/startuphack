@@ -1,14 +1,14 @@
 import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
 import 'package:flutter/material.dart';
 
-class Interests extends StatefulWidget {
-  const Interests({Key? key}) : super(key: key);
+class Values extends StatefulWidget {
+  const Values({Key? key}) : super(key: key);
 
   @override
-  State<Interests> createState() => _InterestsState();
+  State<Values> createState() => _ValuesState();
 }
 
-class _InterestsState extends State<Interests> {
+class _ValuesState extends State<Values> {
   List<String> tags = [];
   List<String> options = [
     'Religious',
