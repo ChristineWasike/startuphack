@@ -5,10 +5,10 @@ class Interests extends StatefulWidget {
   const Interests({Key? key}) : super(key: key);
 
   @override
-  State<Interests> createState() => _PassionsState();
+  State<Interests> createState() => _InterestsState();
 }
 
-class _PassionsState extends State<Interests> {
+class _InterestsState extends State<Interests> {
   List<String> tags = [];
   List<String> options = [
     'Chemistry',
@@ -35,7 +35,7 @@ class _PassionsState extends State<Interests> {
           physics: BouncingScrollPhysics(),
           children: <Widget>[
             Text(
-              "Food",
+              "Interests",
               style: TextStyle(fontSize: 24.0),
             ),
             SizedBox(
