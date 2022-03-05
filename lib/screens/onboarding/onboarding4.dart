@@ -1,14 +1,14 @@
 import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
 import 'package:flutter/material.dart';
 
-class Passions extends StatefulWidget {
-  const Passions({Key? key}) : super(key: key);
+class Hobbies extends StatefulWidget {
+  const Hobbies({Key? key}) : super(key: key);
 
   @override
-  State<Passions> createState() => _PassionsState();
+  State<Hobbies> createState() => _HobbiesState();
 }
 
-class _PassionsState extends State<Passions> {
+class _HobbiesState extends State<Hobbies> {
   List<String> tags = [];
   List<String> options = [
     'Football',
@@ -42,7 +42,7 @@ class _PassionsState extends State<Passions> {
               height: 20,
             ),
             Text(
-              "Get recommended activities based on your passions.",
+              "Hobbies you like.",
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(

@@ -1,27 +1,27 @@
 import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
 import 'package:flutter/material.dart';
 
-class Passions extends StatefulWidget {
-  const Passions({Key? key}) : super(key: key);
+class Interests extends StatefulWidget {
+  const Interests({Key? key}) : super(key: key);
 
   @override
-  State<Passions> createState() => _PassionsState();
+  State<Interests> createState() => _PassionsState();
 }
 
-class _PassionsState extends State<Passions> {
+class _PassionsState extends State<Interests> {
   List<String> tags = [];
   List<String> options = [
-    'Fries',
-    'Hotdogs',
-    'Indian',
-    'Tacos',
-    'Barritos',
-    'Meatballs',
-    'Chips',
-    'Pasta',
-    'Plain Rice',
+    'Chemistry',
+    'Food',
+    'Travelling',
+    'Architecture',
+    'Space stuff',
+    'Gym stuff',
+    'Animals',
+    'Friendship',
+    'Physics',
     'Chikcen',
-    'Jollof'
+    'Cooking'
   ];
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class _PassionsState extends State<Passions> {
               height: 20,
             ),
             Text(
-              "Get recommended activities based on your passions.",
+              "What are you interested in.",
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(
