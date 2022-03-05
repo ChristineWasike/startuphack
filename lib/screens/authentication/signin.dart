@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:startuphack/main.dart';
 // import 'package:save/screens/authenticate/pin/enter_pin.dart';
 // import 'package:save/services/auth.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 import 'package:startuphack/shared/loading.dart';
 
 class SignIn extends StatefulWidget {
@@ -52,7 +53,7 @@ class _SignInState extends State<SignIn> {
                               color: Colors.grey,
                             ),
                             focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.amber[700]!),
+                              borderSide: BorderSide(color: Colors.grey[700]!),
                             ),
                           ),
                           validator: (val) =>
@@ -71,7 +72,7 @@ class _SignInState extends State<SignIn> {
                               color: Colors.grey,
                             ),
                             focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(color: Colors.amber[700]!),
+                              borderSide: BorderSide(color: Colors.grey[700]!),
                             ),
                           ),
                           validator: (val) => val!.length < 6
@@ -87,7 +88,7 @@ class _SignInState extends State<SignIn> {
                           height: 40,
                           child: RaisedButton(
                               textColor: Colors.white,
-                              color: Colors.amber[600],
+                              color: Colors.grey[600],
                               padding: const EdgeInsets.all(0.0),
                               elevation: 5.0,
                               shape: RoundedRectangleBorder(
@@ -107,13 +108,29 @@ class _SignInState extends State<SignIn> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => const MyHomePage()));
+                                        builder: (context) =>
+                                            const MyHomePage()));
                               }),
                         ),
                         const SizedBox(height: 12.0),
                         Text(error,
                             style: const TextStyle(
                                 color: Colors.red, fontSize: 14.0)),
+                        const SizedBox(height: 10.0),
+                        SignInButton(
+                          Buttons.Google,
+                          onPressed: () {},
+                        ),
+                        const SizedBox(height: 5.0),
+                        SignInButton(
+                          Buttons.Apple,
+                          onPressed: () {},
+                        ),
+                        const SizedBox(height: 5.0),
+                        SignInButton(
+                          Buttons.Facebook,
+                          onPressed: () {},
+                        ),
                         const SizedBox(height: 20.0),
                         TextButton.icon(
                           icon: const Icon(

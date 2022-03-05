@@ -35,8 +35,8 @@ class _RegisterState extends State<Register> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Container(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 20.0, horizontal: 50.0),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20.0, horizontal: 50.0),
                     child: Form(
                       key: _formKey,
                       child: Column(
@@ -57,7 +57,7 @@ class _RegisterState extends State<Register> {
                               ),
                               focusedBorder: UnderlineInputBorder(
                                 borderSide:
-                                    BorderSide(color: Colors.amber[700]!),
+                                    BorderSide(color: Colors.grey[700]!),
                               ),
                             ),
                             validator: (val) =>
@@ -76,7 +76,7 @@ class _RegisterState extends State<Register> {
                               ),
                               focusedBorder: UnderlineInputBorder(
                                 borderSide:
-                                    BorderSide(color: Colors.amber[700]!),
+                                    BorderSide(color: Colors.grey[700]!),
                               ),
                             ),
                             validator: (val) =>
@@ -95,7 +95,7 @@ class _RegisterState extends State<Register> {
                               ),
                               focusedBorder: UnderlineInputBorder(
                                 borderSide:
-                                    BorderSide(color: Colors.amber[700]!),
+                                    BorderSide(color: Colors.grey[700]!),
                               ),
                             ),
                             validator: (val) =>
@@ -115,7 +115,7 @@ class _RegisterState extends State<Register> {
                               ),
                               focusedBorder: UnderlineInputBorder(
                                 borderSide:
-                                    BorderSide(color: Colors.amber[700]!),
+                                    BorderSide(color: Colors.grey[700]!),
                               ),
                             ),
                             validator: (val) => val!.length < 6
@@ -131,7 +131,7 @@ class _RegisterState extends State<Register> {
                             height: 40,
                             child: RaisedButton(
                                 textColor: Colors.white,
-                                color: Colors.amber[600],
+                                color: Colors.grey[600],
                                 padding: const EdgeInsets.all(0.0),
                                 elevation: 5.0,
                                 shape: RoundedRectangleBorder(
@@ -153,8 +153,8 @@ class _RegisterState extends State<Register> {
                           ),
                           const SizedBox(height: 12.0),
                           Text(error,
-                              style:
-                                  const TextStyle(color: Colors.red, fontSize: 14.0)),
+                              style: const TextStyle(
+                                  color: Colors.red, fontSize: 14.0)),
                           const SizedBox(height: 15.0),
                           TextButton.icon(
                             icon: const Icon(
