@@ -35,6 +35,51 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void _showSettingsPanel() {
+    showModalBottomSheet(
+        context: context,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
+        builder: (context) {
+          return Container(
+            decoration: BoxDecoration(
+                border: Border.all(),
+                borderRadius: const BorderRadius.all(Radius.circular(20))),
+            height: 800,
+            padding:
+                const EdgeInsets.symmetric(vertical: 00.0, horizontal: 0.0),
+            child: Container(
+              decoration: const BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                image: DecorationImage(
+                  image: AssetImage("assets/bike.jpeg"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: Column(
+                children: [
+                  const Image(image: AssetImage('assets/Group3.png')),
+                  const SizedBox(height: 5.0),
+                  TextButton.icon(
+                      icon: const Icon(
+                        Icons.person,
+                        color: Colors.black87,
+                      ),
+                      label: const Text(
+                        "logout",
+                        style: TextStyle(
+                          color: Colors.black87,
+                        ),
+                      ),
+                      onPressed: () async {}),
+                ],
+              ),
+            ),
+          );
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,8 +99,13 @@ class _MyHomePageState extends State<MyHomePage> {
               bottom: 0.0,
             ),
             children: <Widget>[
-              const SizedBox(
+              const Image(
+                image: AssetImage('assets/logo.png'),
+                width: 30,
                 height: 30,
+              ),
+              const SizedBox(
+                height: 10,
               ),
               Container(
                 height: 600,
@@ -83,8 +133,13 @@ class _MyHomePageState extends State<MyHomePage> {
                           height: 80.0,
                           point: latLng.LatLng(-1.930, 30.127),
                           builder: (ctx) => Container(
-                            child: const Image(
-                                image: AssetImage('assets/memoji.png')),
+                            child: GestureDetector(
+                              onTap: () {
+                                _showSettingsPanel();
+                              },
+                              child: const Image(
+                                  image: AssetImage('assets/Group3.png')),
+                            ),
                           ),
                         ),
                         Marker(
@@ -93,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           point: latLng.LatLng(-1.942617, 30.138201),
                           builder: (ctx) => Container(
                             child: const Image(
-                                image: AssetImage('assets/memoji1.png')),
+                                image: AssetImage('assets/Group4.png')),
                           ),
                         ),
                         Marker(
@@ -102,7 +157,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           point: latLng.LatLng(-1.936860, 30.078765),
                           builder: (ctx) => Container(
                             child: const Image(
-                                image: AssetImage('assets/memoji2.png')),
+                                image: AssetImage('assets/Group5.png')),
                           ),
                         ),
                         Marker(
@@ -111,7 +166,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           point: latLng.LatLng(-1.951515, 30.157585),
                           builder: (ctx) => Container(
                             child: const Image(
-                                image: AssetImage('assets/memoji3.png')),
+                                image: AssetImage('assets/Group6.png')),
                           ),
                         ),
                         Marker(
@@ -120,7 +175,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           point: latLng.LatLng(-1.935501, 30.094790),
                           builder: (ctx) => Container(
                             child: const Image(
-                                image: AssetImage('assets/memoji4.png')),
+                                image: AssetImage('assets/Group7.png')),
                           ),
                         ),
                         Marker(
@@ -129,7 +184,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           point: latLng.LatLng(-1.942617, 30.138201),
                           builder: (ctx) => Container(
                             child: const Image(
-                                image: AssetImage('assets/memoji1.png')),
+                                image: AssetImage('assets/Group8.png')),
                           ),
                         ),
                       ],
