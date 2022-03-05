@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 // ignore: library_prefixes
@@ -56,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 30,
               ),
               Container(
-                height: 500,
+                height: 600,
                 alignment: Alignment.centerLeft,
                 child: FlutterMap(
                   options: MapOptions(
@@ -73,22 +75,65 @@ class _MyHomePageState extends State<MyHomePage> {
                         'id':
                             'christine-wasike.cl0d220co04cg27pfz30sz43l-9q6k0',
                       },
-                      attributionBuilder: (_) {
-                        return const Text("© OpenStreetMap contributors");
-                      },
                     ),
-                    /*MarkerLayerOptions(
-            markers: [
-              Marker(
-              width: 80.0,
-              height: 80.0,
-              point: latLng.LatLng(51.50, -0.09);
-              builder: (ctx) => Container(
-                child: FlutterLogo(),
-              ),
-              ),
-            ],
-          ),*/
+                    MarkerLayerOptions(
+                      markers: [
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.930, 30.127),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.942617, 30.138201),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji1.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.936860, 30.078765),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji2.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.951515, 30.157585),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji3.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.935501, 30.094790),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji4.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.942617, 30.138201),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji1.png')),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
