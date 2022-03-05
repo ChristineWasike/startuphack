@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Fit-in',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -56,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 30,
               ),
               Container(
-                height: 500,
+                height: 600,
                 alignment: Alignment.centerLeft,
                 child: FlutterMap(
                   options: MapOptions(
@@ -73,20 +74,65 @@ class _MyHomePageState extends State<MyHomePage> {
                         'id':
                             'christine-wasike.cl0d220co04cg27pfz30sz43l-9q6k0',
                       },
-                      
                     ),
                     MarkerLayerOptions(
-            markers: [
-              Marker(
-              width: 80.0,
-              height: 80.0,
-              point: latLng.LatLng(-1.930, 30.127),
-              builder: (ctx) => Container(
-                child: const FlutterLogo(),
-              ),
-              ),
-            ],
-          ),
+                      markers: [
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.930, 30.127),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.942617, 30.138201),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji1.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.936860, 30.078765),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji2.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.951515, 30.157585),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji3.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.935501, 30.094790),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji4.png')),
+                          ),
+                        ),
+                        Marker(
+                          width: 80.0,
+                          height: 80.0,
+                          point: latLng.LatLng(-1.942617, 30.138201),
+                          builder: (ctx) => Container(
+                            child: const Image(
+                                image: AssetImage('assets/memoji1.png')),
+                          ),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
