@@ -23,6 +23,7 @@ class _AddHangoutState extends State<AddHangout> {
   ];
 
   final _formKey = GlobalKey<FormState>();
+  bool loading = false;
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +35,7 @@ class _AddHangoutState extends State<AddHangout> {
         elevation: 0,
         title: const Center(
           child: Text(
-            "Create a hangout",
+            "",
             style: TextStyle(color: Colors.black),
           ),
         ),
@@ -47,82 +48,118 @@ class _AddHangoutState extends State<AddHangout> {
           },
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 50.0),
-        child: Center(
-          child: Form(
-            child: Column(
-              children: const <Widget>[
-                SizedBox(
-                  height: 10.0,
-                ),
-                // form parts
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Hangout Title',
-                    labelStyle: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.grey,
+      body: ListView(
+        scrollDirection: Axis.vertical,
+        children: [
+          Container(
+            child: Padding(
+              padding:
+                  const EdgeInsets.symmetric(vertical: 30.0, horizontal: 50.0),
+              child: Form(
+                child: Column(
+                  children: <Widget>[
+                    SizedBox(height: 20.0),
+                    Text('Create a hangout',
+                        style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w800,
+                            color: Colors.black)),
+                    SizedBox(height: 30.0),
+                    // form parts
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Hangout Title',
+                        labelStyle: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey,
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black),
+                        ),
+                      ),
                     ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                    SizedBox(
+                      height: 20.0,
                     ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Category',
-                    labelStyle: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.grey,
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Category',
+                        labelStyle: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey,
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black),
+                        ),
+                      ),
                     ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                    SizedBox(
+                      height: 20.0,
                     ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Hangout Description',
-                    labelStyle: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.grey,
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Hangout Description',
+                        labelStyle: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey,
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black),
+                        ),
+                      ),
                     ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                    SizedBox(
+                      height: 20.0,
                     ),
-                  ),
-                ),
-                SizedBox(
-                  height: 20.0,
-                ),
-                TextField(
-                  decoration: InputDecoration(
-                    labelText: 'Title',
-                    labelStyle: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Colors.grey,
+                    TextField(
+                      decoration: InputDecoration(
+                        labelText: 'Other Details',
+                        labelStyle: TextStyle(
+                          fontWeight: FontWeight.w700,
+                          color: Colors.grey,
+                        ),
+                        focusedBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black),
+                        ),
+                      ),
                     ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                    SizedBox(
+                      height: 30,
                     ),
-                  ),
+                    SizedBox(
+                      width: 250,
+                      height: 40,
+                      child: RaisedButton(
+                          textColor: Colors.white,
+                          color: Colors.grey[600],
+                          padding: const EdgeInsets.all(0.0),
+                          elevation: 5.0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          child: Container(
+                            padding: const EdgeInsets.all(8.0),
+                            child: const Text(
+                              'Complete',
+                              style: TextStyle(fontSize: 16),
+                            ),
+                          ),
+                          onPressed: () {
+                            if (_formKey.currentState!.validate()) {
+                              setState(() => loading = true);
+                            }
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const MyHomePage()));
+                          }),
+                    ),
+                  ],
                 ),
-                SizedBox(
-                  height: 30,
-                ),
-                
-              ],
+              ),
             ),
-            
           ),
-        ),
+        ],
       ),
     );
   }
