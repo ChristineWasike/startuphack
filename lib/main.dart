@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 // ignore: library_prefixes
@@ -71,22 +73,20 @@ class _MyHomePageState extends State<MyHomePage> {
                         'id':
                             'christine-wasike.cl0d220co04cg27pfz30sz43l-9q6k0',
                       },
-                      attributionBuilder: (_) {
-                        return const Text("© OpenStreetMap contributors");
-                      },
+                      
                     ),
-                    /*MarkerLayerOptions(
+                    MarkerLayerOptions(
             markers: [
               Marker(
               width: 80.0,
               height: 80.0,
-              point: latLng.LatLng(51.50, -0.09);
+              point: latLng.LatLng(-1.930, 30.127),
               builder: (ctx) => Container(
-                child: FlutterLogo(),
+                child: const FlutterLogo(),
               ),
               ),
             ],
-          ),*/
+          ),
                   ],
                 ),
               ),
