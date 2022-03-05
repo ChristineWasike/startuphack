@@ -47,9 +47,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 border: Border.all(),
                 borderRadius: const BorderRadius.all(Radius.circular(20))),
             height: 800,
-            padding:
-                const EdgeInsets.symmetric(vertical: 00.0, horizontal: 0.0),
+           
             child: Container(
+              padding:
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
               decoration: const BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
                 image: DecorationImage(
@@ -58,21 +59,20 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               child: Column(
-                children: [
-                  const Image(image: AssetImage('assets/Group3.png')),
-                  const SizedBox(height: 5.0),
-                  TextButton.icon(
-                      icon: const Icon(
-                        Icons.person,
-                        color: Colors.black87,
-                      ),
-                      label: const Text(
-                        "logout",
-                        style: TextStyle(
-                          color: Colors.black87,
-                        ),
-                      ),
-                      onPressed: () async {}),
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Image(
+                    image: AssetImage('assets/Group3.png'),
+                    height: 30,
+                    width: 30,
+                  ),
+                  SizedBox(height: 5.0),
+                  Text('Rurimeria Hills',
+                      style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white)),
                 ],
               ),
             ),
