@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 // ignore: library_prefixes
 import 'package:latlong2/latlong.dart' as latLng;
+import 'package:startuphack/screens/hangouts/add_hangout.dart';
 import 'package:startuphack/screens/authentication/authenticate.dart';
 import './screens/onboarding/onboarding1.dart';
 
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 10,
               ),
               Container(
-                height: 600,
+                height: 500,
                 alignment: Alignment.centerLeft,
                 child: FlutterMap(
                   options: MapOptions(
@@ -195,6 +196,34 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               const SizedBox(
                 height: 30,
+              ),
+              Container(
+                width: 150,
+                height: 40,
+                child: RaisedButton(
+                  textColor: Colors.white,
+                  color: Colors.grey[600],
+                  padding: const EdgeInsets.all(0.0),
+                  elevation: 5.0,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Container(
+                    padding: const EdgeInsets.all(8.0),
+                    child: const Text(
+                      'Add Hangout',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => AddHangout()));
+                    });
+                  },
+                ),
               ),
             ]),
       ),
