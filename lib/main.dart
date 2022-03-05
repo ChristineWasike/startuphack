@@ -7,6 +7,8 @@ import 'package:latlong2/latlong.dart' as latLng;
 import 'package:startuphack/screens/hangouts/add_hangout.dart';
 import 'package:startuphack/screens/authentication/authenticate.dart';
 import './screens/onboarding/onboarding1.dart';
+import 'package:startuphack/screens/onboarding/onboardin2.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -295,11 +297,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
                
                 IconBottomBar(
                   text: "Settings",
-                  icon: Icons.settings,
+                  icon: Icons.person,
                   selected: _selectedIndex == 3,
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => const MyHomePage()));
+                        MaterialPageRoute(builder: (context) => const ProfilePage()));
                     setState(() {
                       _selectedIndex = 3;
                     });
