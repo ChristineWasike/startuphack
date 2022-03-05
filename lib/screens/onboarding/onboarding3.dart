@@ -11,17 +11,15 @@ class Interests extends StatefulWidget {
 class _InterestsState extends State<Interests> {
   List<String> tags = [];
   List<String> options = [
-    'Chemistry',
-    'Food',
-    'Travelling',
-    'Architecture',
-    'Space stuff',
-    'Gym stuff',
-    'Animals',
-    'Friendship',
-    'Physics',
-    'Chikcen',
-    'Cooking'
+    'Religious',
+    'Atheist',
+    'Conservative',
+    'Liberal',
+    'Agnostic',
+    'Honesty',
+    'Hardworker',
+    'Generous',
+    'Considerate'
   ];
   @override
   Widget build(BuildContext context) {
@@ -35,14 +33,14 @@ class _InterestsState extends State<Interests> {
           physics: BouncingScrollPhysics(),
           children: <Widget>[
             Text(
-              "Interests",
+              "Values and Beliefs",
               style: TextStyle(fontSize: 24.0),
             ),
             SizedBox(
               height: 20,
             ),
             Text(
-              "What are you interested in.",
+              "What are your desired values and beliefs.",
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(

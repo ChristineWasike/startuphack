@@ -11,17 +11,16 @@ class Hobbies extends StatefulWidget {
 class _HobbiesState extends State<Hobbies> {
   List<String> tags = [];
   List<String> options = [
-    'Football',
-    'Racing',
-    'Rugby',
-    'Track',
-    'Wine',
-    'Drawing',
-    'Reading',
-    'Playing video games',
-    'Animating',
-    'Coding',
-    'Sleeping'
+    'Introvert',
+    'Extrovert',
+    'Charismatic',
+    'Funny',
+    'Joyful',
+    'Sombre',
+    'Conscientious',
+    'Agreeable',
+    'Strict',
+    'Discerning',
   ];
   @override
   Widget build(BuildContext context) {
@@ -35,14 +34,14 @@ class _HobbiesState extends State<Hobbies> {
           physics: BouncingScrollPhysics(),
           children: <Widget>[
             Text(
-              "Hobbies",
+              "Personality Traits",
               style: TextStyle(fontSize: 24.0),
             ),
             SizedBox(
               height: 20,
             ),
             Text(
-              "Hobbies you like.",
+              "Your personality.",
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(
