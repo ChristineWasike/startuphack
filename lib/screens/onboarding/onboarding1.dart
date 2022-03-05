@@ -32,8 +32,8 @@ class _PassionsState extends State<Passions> {
     'Reading',
     'Karaoke',
     'Brunch',
-    'Cat Lovers',
-    'Dog Lovers',
+    'Cat Lover',
+    'Dog Lover',
     'Coffee',
   ];
   @override
@@ -78,7 +78,7 @@ class _PassionsState extends State<Passions> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Interests()));
+                        builder: (context) => const Values()));
               },
               child: const Text("Continue"),
               style: ButtonStyle(

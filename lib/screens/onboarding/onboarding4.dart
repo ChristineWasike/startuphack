@@ -2,27 +2,26 @@ import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:startuphack/main.dart';
 
-class Hobbies extends StatefulWidget {
-  const Hobbies({Key? key}) : super(key: key);
+class Personality extends StatefulWidget {
+  const Personality({Key? key}) : super(key: key);
 
   @override
-  State<Hobbies> createState() => _HobbiesState();
+  State<Personality> createState() => _PersonalityState();
 }
 
-class _HobbiesState extends State<Hobbies> {
+class _PersonalityState extends State<Personality> {
   List<String> tags = [];
   List<String> options = [
-    'Football',
-    'Racing',
-    'Rugby',
-    'Track',
-    'Wine',
-    'Drawing',
-    'Reading',
-    'Playing video games',
-    'Animating',
-    'Coding',
-    'Sleeping'
+    'Introvert',
+    'Extrovert',
+    'Charismatic',
+    'Funny',
+    'Joyful',
+    'Sombre',
+    'Conscientious',
+    'Agreeable',
+    'Strict',
+    'Discerning',
   ];
   @override
   Widget build(BuildContext context) {
@@ -36,14 +35,14 @@ class _HobbiesState extends State<Hobbies> {
           physics: BouncingScrollPhysics(),
           children: <Widget>[
             Text(
-              "Hobbies",
+              "Personality Traits",
               style: TextStyle(fontSize: 24.0),
             ),
             SizedBox(
               height: 20,
             ),
             Text(
-              "Hobbies you like.",
+              "Your personality.",
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(

@@ -1,29 +1,26 @@
 import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
 import 'package:flutter/material.dart';
+import 'package:startuphack/screens/onboarding/onboarding4.dart';
 
-import 'onboarding4.dart';
-
-class Interests extends StatefulWidget {
-  const Interests({Key? key}) : super(key: key);
+class Values extends StatefulWidget {
+  const Values({Key? key}) : super(key: key);
 
   @override
-  State<Interests> createState() => _PassionsState();
+  State<Values> createState() => _ValuesState();
 }
 
-class _PassionsState extends State<Interests> {
+class _ValuesState extends State<Values> {
   List<String> tags = [];
   List<String> options = [
-    'Chemistry',
-    'Food',
-    'Travelling',
-    'Architecture',
-    'Space stuff',
-    'Gym stuff',
-    'Animals',
-    'Friendship',
-    'Physics',
-    'Chikcen',
-    'Cooking'
+    'Religious',
+    'Atheist',
+    'Conservative',
+    'Liberal',
+    'Agnostic',
+    'Honesty',
+    'Hardworker',
+    'Generous',
+    'Considerate'
   ];
   @override
   Widget build(BuildContext context) {
@@ -37,14 +34,14 @@ class _PassionsState extends State<Interests> {
           physics: BouncingScrollPhysics(),
           children: <Widget>[
             Text(
-              "Food",
+              "Values and Beliefs",
               style: TextStyle(fontSize: 24.0),
             ),
             SizedBox(
               height: 20,
             ),
             Text(
-              "What are you interested in.",
+              "What are your desired values and beliefs.",
               style: TextStyle(fontSize: 16.0),
             ),
             SizedBox(
@@ -68,7 +65,7 @@ class _PassionsState extends State<Interests> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Hobbies()));
+                        builder: (context) => const Personality()));
               },
               child: Text("Continue"),
               style: ButtonStyle(
