@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 // ignore: library_prefixes
 import 'package:latlong2/latlong.dart' as latLng;
+import 'package:startuphack/screens/onboarding/onboardin2.dart';
 import './screens/onboarding/onboarding1.dart';
 import 'package:startuphack/screens/authentication/authenticate.dart';
 
