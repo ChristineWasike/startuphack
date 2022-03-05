@@ -145,9 +145,6 @@ class _AddHangoutState extends State<AddHangout> {
                             ),
                           ),
                           onPressed: () {
-                            if (_formKey.currentState!.validate()) {
-                              setState(() => loading = true);
-                            }
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(

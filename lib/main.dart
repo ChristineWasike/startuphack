@@ -109,7 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 10,
               ),
               Container(
-                height: 600,
+                height: 500,
                 alignment: Alignment.centerLeft,
                 child: FlutterMap(
                   options: MapOptions(
