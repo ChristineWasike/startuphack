@@ -1,5 +1,6 @@
 import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
 import 'package:flutter/material.dart';
+import 'package:startuphack/screens/onboarding/onboarding3.dart';
 
 import '../../main.dart';
 
@@ -77,7 +78,7 @@ class _PassionsState extends State<Passions> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const MyHomePage()));
+                        builder: (context) => const Interests()));
               },
               child: const Text("Continue"),
               style: ButtonStyle(

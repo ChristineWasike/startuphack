@@ -1,6 +1,8 @@
 import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
 import 'package:flutter/material.dart';
 
+import 'onboarding4.dart';
+
 class Interests extends StatefulWidget {
   const Interests({Key? key}) : super(key: key);
 
@@ -62,7 +64,12 @@ class _PassionsState extends State<Interests> {
               height: 200,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Hobbies()));
+              },
               child: Text("Continue"),
               style: ButtonStyle(
                   backgroundColor:
