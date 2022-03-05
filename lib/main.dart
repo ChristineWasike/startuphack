@@ -3,7 +3,9 @@ import 'package:flutter_map/flutter_map.dart';
 // ignore: library_prefixes
 import 'package:latlong2/latlong.dart' as latLng;
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
