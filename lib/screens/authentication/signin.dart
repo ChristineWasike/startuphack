@@ -3,6 +3,7 @@ import 'package:startuphack/main.dart';
 // import 'package:save/screens/authenticate/pin/enter_pin.dart';
 // import 'package:save/services/auth.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:startuphack/screens/onboarding/onboarding1.dart';
 import 'package:startuphack/shared/loading.dart';
 
 class SignIn extends StatefulWidget {
@@ -109,7 +110,7 @@ class _SignInState extends State<SignIn> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                            const MyHomePage()));
+                                            const Passions()));
                               }),
                         ),
                         const SizedBox(height: 12.0),

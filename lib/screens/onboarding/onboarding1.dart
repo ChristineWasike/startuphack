@@ -1,6 +1,7 @@
 import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
 import 'package:flutter/material.dart';
-import 'package:startuphack/screens/authentication/authenticate.dart';
+
+import '../../main.dart';
 
 class Passions extends StatefulWidget {
   const Passions({Key? key}) : super(key: key);
@@ -76,7 +77,7 @@ class _PassionsState extends State<Passions> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const Authenticate()));
+                        builder: (context) => const MyHomePage()));
               },
               child: const Text("Continue"),
               style: ButtonStyle(
